@@ -1,25 +1,4 @@
 # termux-ngrok
-Run official ngrok in termux 
-
-# Install
-```bash
-pkg update -y
-pkg install git
-git clone https://github.com/Yisus7u7/termux-ngrok
-
-cd termux-ngrok
-bash install.sh
-```
-
-And run : `ngrok`
-
-# Manifest
-
-ES: este repositorio es codigo libre, puedes usarlo sin ningun problema.
-
-EN: this repository is free code, you can use it without any problem.
-
-# termux-ngrok
 Run the official ngrok binary in Termux.
 
 # 🚀 Install
@@ -34,7 +13,8 @@ bash install.sh
 
 Once installed, you can start ngrok by simply typing:
 ngrok
-🗑️ Uninstall
+
+# 🗑️ Uninstall
 To completely remove ngrok and all its configuration files from your system:
 
 cd termux-ngrok
@@ -45,7 +25,7 @@ To uninstall and automatically clean the package cache without being prompted:
 
 bash uninstall.sh --prune
 
-📜 Manifest
+# 📜 Manifest
 ES: Este repositorio es código libre, puedes usarlo sin ningún problema.
 EN: This repository is free code, you can use it without any problem.
 
