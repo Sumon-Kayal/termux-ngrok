@@ -32,9 +32,18 @@ if [ -d "$HOME/.ngrok2" ]; then
     echo "Removed: legacy config folder ($HOME/.ngrok2)"
 fi
 
-# 4. Optional: Clean up unused dependencies
-echo -e "\e[1;34mCleaning up unused packages...\e[0m"
-apt autoremove -y
-pkg clean
+# 4. Optional: Clean up package cache (only if --prune flag is provided)
+if [ "$1" == "--prune" ]; then
+    echo -e "\e[1;34mCleaning package cache...\e[0m"
+    pkg clean
+elif [ "$1" != "--no-prompt" ]; then
+    # Interactive confirmation for cleanup
+    read -p "Do you want to clean the package cache? (y/N): " -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        echo -e "\e[1;34mCleaning package cache...\e[0m"
+        pkg clean
+    fi
+fi
 
-echo -e "\e[1;32mNgrok has been completely removed!"
+echo -e "\e[1;32mNgrok has been completely removed!\e[0m"
