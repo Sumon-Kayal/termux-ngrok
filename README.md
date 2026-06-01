@@ -59,7 +59,8 @@ bash uninstall.sh --prune
 After uninstalling, remove the cloned folder:
 
 ```bash
-rm -f -r "termux-ngrok"
+cd ..
+rm -r "termux-ngrok"
 ```
 
 ---
