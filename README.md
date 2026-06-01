@@ -60,7 +60,7 @@ After uninstalling, remove the cloned folder:
 
 ```bash
 cd ..
-rm -r "termux-ngrok"
+rm -f -r "termux-ngrok"
 ```
 
 ---
