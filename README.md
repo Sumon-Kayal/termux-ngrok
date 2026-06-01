@@ -54,14 +54,6 @@ To uninstall and automatically clean the package cache without being prompted:
 bash uninstall.sh --prune
 ```
 
-### Cleanup
-
-After uninstalling, remove the cloned folder:
-
-```bash
-rm -f -r "termux-ngrok"
-```
-
 ---
 
 ## 📜 License
